@@ -1,0 +1,295 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+/* Estilos generales */
+body {
+    color:#353233;
+    font-family:'Didact Gothic', sans-serif;
+    background-color:#DCCCFF;
+}
+
+h1 {
+    color:#289b7e;
+}
+
+h2 {
+    color:#F17105;
+    margin-bottom:3%;
+}
+
+h3 {
+    color:#46769D;
+}
+
+p {
+    margin: 2% 0;
+    text-align:justify;
+}
+
+a {
+    color:#C75C6A;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+header, main, footer {
+    margin: 0 auto;
+    background-color:#FFF;
+}
+
+header, footer {
+    width: 83%;
+}
+
+main {
+    padding: 4%;
+    width: 75%;
+    overflow:auto;
+}
+
+/* Header */
+
+header {
+    position:sticky;
+    top:0px;
+}
+
+#banner {
+    background-color: #480355;
+    background-image:url("../images/logo.png");
+    background-repeat:no-repeat;
+    background-position: top right;
+    background-size: contain;
+}
+
+#banner h1 {
+    display:inline-block;
+    color:#FFF;
+    width:100%;
+    text-align:center;
+    line-height: 105px;
+}
+
+/* Menú */ 
+
+nav ul {
+    background-color:#46769D;
+    display:flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height:50px;
+}
+
+nav ul li {
+    list-style-type:none;
+    text-align:center;
+    width:20%;
+    padding: 11.5px 0%;
+}
+
+nav ul li:hover {
+    background-color:#F17105;
+}
+
+nav ul li a {
+    color:#FFF;
+    font-size:1.2rem;
+}
+
+
+/* Footer */
+
+    footer {
+        display:flex;
+        background: linear-gradient(180deg, rgba(72,3,85,1) 60%, rgba(220, 204, 255,1) 100%);
+        height:80px;
+        flex-flow: row nowrap;
+        align-items: center;
+        color:#FFF;
+    }
+    .copy {
+        width:60%;
+        padding-left:3%;
+    }
+    .copy span {
+        font-size:1.3em;
+    }
+
+    .social {
+        width:40%;
+        text-align:right;
+    }
+    .social span {
+        padding-right:20px;
+    }
+    .social a {
+        color:#FFF;
+        font-weight: normal;
+    }
+
+/* Home */
+
+article {
+    display:grid;
+    grid-template-columns: 28% 72%;
+    grid-template-rows: 30px 60px 30px 110px 110px;
+    grid-template-areas: "cover author"
+                         "cover title"
+                         "cover year"
+                         "cover summary"
+                         "cover opinion";
+    gap:10px 10px;
+    align-items: center;
+}
+
+.cover {
+    width: 90%;
+    grid-area: cover;
+}
+
+.title {
+   grid-area: title;
+}
+
+.author {
+   grid-area: author;
+}
+
+.year {
+   grid-area: year;
+}
+
+.summary {
+   grid-area: summary;
+}
+
+.opinion {
+   grid-area: opinion;
+}
+
+.datosBibliograficos {
+    font-weight: bold;
+    color:#480355;
+}
+
+.tituloLibro {
+    font-style: italic;
+}
+
+
+/* Elementos de formulario*/
+
+input[type=submit], input[type=reset]{
+    font-weight: bold;
+    border:2px solid #46769D;
+    padding:5px 10px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+input[type=submit]{
+    background-color:#46769D;
+    color:#FFF;
+}
+
+input[type=submit]:hover{
+    background-color:#FFF;
+    color:#46769D;  
+}
+
+input[type=reset]{
+    background-color:#FFF;
+    color:#46769D;
+}
+
+input[type=reset]:hover{
+    background-color:#46769D;
+    color:#FFF;
+}
+
+input[type=text], input[type=email], select{
+    padding:5px 10px;
+    font-size:14px;
+}
+
+input[type=text], input[type=email] {
+    width:80px;
+}
+
+input[type=text]:focus, input[type=email]:focus {
+    width:250px;
+    transition: width 1s;
+}
+
+fieldset {
+    padding: 10px 0px;
+    border:none;
+    border-top:1px solid #46769D;
+    margin-bottom:10px;
+}
+
+legend {
+    color:#46769D;
+    font-size:20px;
+    padding-right:10px;
+}
+
+label {
+    margin-right:10px;
+}
+
+.row {
+    margin-bottom:8px;
+}
+
+/* Tablas */
+
+table {
+    width: 90%;
+}
+
+table th {
+    border-top: 1px solid #46769D;
+    border-bottom: 1px solid #46769D;
+    text-align:center;
+    color:#480355;
+}
+
+table td {
+    border-top: 1px solid #A1BBDC;
+    border-bottom: 1px solid #A1BBDC;
+    text-align:center;
+}
+
+
+/* Kindle */
+
+.romanos {
+    list-style-type: lower-roman;
+    margin:3% 0;
+    padding-left:5%;
+}
+
+/* Dispositivos XS */
+
+@media only screen and (max-width:600px){
+
+    article {
+        grid-template-columns: 100%;
+        grid-template-rows: 270px 30px 60px 30px 150px 150px;
+        grid-template-areas: "cover "
+                             "author"
+                             "title"
+                             "year"
+                             "summary"
+                             "opinion";
+    }
+
+    .cover {
+        height: 100%;
+        width: auto;
+    }
+
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <!-- ENCABEZADO -->
+    <header>
+        <a href="../index.html">
+            <div id="banner">
+                <h1 class="animate__animated animate__pulse">Míralos Leer</h1>
+            </div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="autores.html">Autores</a></li>
+                <li><a href="kindle.html">Kindle</a></li>
+                <li><a href="about.html">Acerca de</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+     <!-- SECCIÓN PRINCIPAL -->
+    <main>
+        <h2>Contacto</h2>
+        <form action="#">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <div class="row">
+                    <label for="nombreApellido">Nombre y apellido</label>
+                    <input type="text" id="nombreApellido">
+                </div>
+                <div class="row">
+                    <label for="edad">Edad</label>
+                    <select name="edad" id="edad">
+                        <option value="1">Menor de 12</option>
+                        <option value="2">12 a 18</option>
+                        <option value="3">18 a 25</option>
+                        <option value="4">25 a 35</option>
+                        <option value="5">Mayor de 35</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="mail">
+                </div>
+                <div class="row">
+                    <label for="kindle">¿Tenés Kindle?</label>
+                    Sí<input type="radio" name="kindle" value="1">
+                    No<input type="radio" name="kindle" value="2">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Preferencias literarias</legend>
+                <label for="leer">¿Te gusta leer?</label>
+                Sí<input type="radio" name="leer" value="1">
+                No<input type="radio" name="leer" value="2">
+                <br>
+                <br>
+                <label for="generos">Géneros favoritos</label><br>
+                Fantasía <input type="checkbox" name="generos" value=""><br>
+                Ciencia Ficción<input type="checkbox" name="generos" value=""><br>
+                Terror<input type="checkbox" name="generos" value=""><br>
+                Misterio<input type="checkbox" name="generos" value=""><br>
+                Thriller<input type="checkbox" name="generos" value=""><br>
+                No ficción<input type="checkbox" name="generos" value=""><br>
+            </fieldset>
+
+            Suscribirme al newsletter<input type="checkbox" name="newsletter" value="">
+            <br>
+            <br>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar">
+        </form>
+    </main>
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="copy">
+            <span>&copy;</span> Copyright 2021
+        </div>
+        <div class="social">
+            <a href="#" title="Instagram"><span class="material-icons">photo_camera</span></a>
+            <a href="#" title="Facebook"><span class="material-icons">facebook</span></a>
+            <a href="#" title="Envíanos un e-mail"><span class="material-icons">email</span></div></a>
+    </footer>
+</body>
+</html>
