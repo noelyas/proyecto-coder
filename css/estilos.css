@@ -202,25 +202,3 @@ table td {
     margin:3% 0;
     padding-left:5%;
 }
-
-/* Dispositivos XS */
-
-@media only screen and (max-width:600px){
-
-    article {
-        grid-template-columns: 100%;
-        grid-template-rows: 270px 30px 60px 30px 150px 150px;
-        grid-template-areas: "cover "
-                             "author"
-                             "title"
-                             "year"
-                             "summary"
-                             "opinion";
-    }
-
-    .cover {
-        height: 100%;
-        width: auto;
-    }
-
-}
