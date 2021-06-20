@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Míralos Leer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -19,47 +20,71 @@
                 <h1 class="animate__animated animate__pulse">Míralos Leer</h1>
             </div>
         </a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/autores.html">Autores</a></li>
-                <li><a href="pages/kindle.html">Kindle</a></li>
-                <li><a href="pages/about.html">Acerca de</a></li>
-                <li><a href="pages/contacto.html">Contacto</a></li>
-            </ul>
+        <!-- NAVBAR BOOTSTRAP -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/autores.html">Autores</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/kindle.html">Kindle</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/about.html">Acerca de</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
         </nav>
     </header>
     <!-- SECCIÓN PRINCIPAL -->
     <main>
-        <h2>Recomendación del día</h2>
-        <article>
-            <img src="images/tapa_001.jpg" alt="La mano izquierda de la oscuridad" class="cover">
-            <div class="author">
-                <p>
-                    <span class="datosBibliograficos">Autor:</span> Ursula K. Le Guin
-                </p>
+        <h2>Lecturas recomendadas</h2>
+        <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/tapa_001.jpg" alt="..." style="width: 100%;">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title"><span class="tituloLibro">La mano izquierda de la oscuridad</span> &#10001; (título original: <span class="tituloLibro">The Left Hand of Darkness</span>)</h5>
+                  <p class="card-text"><span class="datosBibliograficos">Autora:</span> Ursula K. Le Guin</p>
+                  <p class="card-text"><span class="datosBibliograficos">Año:</span> 1969</p>
+                  <p class="card-text"><span class="datosBibliograficos">Sinopsis:</span> Esta controvertida novela trata del género y la sexualidad a través de los ojos de un terrestre llegado al planeta Invierno, colonia en la que los habitantes han mutado a hermafroditas capaces de cambiar de sexo.</p>
+                  <p class="card-text"><span class="datosBibliograficos">Opinión:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quo aliquam neque voluptate, tempora debitis? Reprehenderit impedit in inventore ullam quibusdam ad. Veritatis qui earum nisi. Repellendus ex id sequi!</p>
+                  <p class="card-text"><small class="text-muted">18/06/2021</small></p>
+                </div>
+              </div>
             </div>
-            <div class=title">
-                <p>
-                    <span class="datosBibliograficos">Título:</span> <span class="tituloLibro">La mano izquierda de la oscuridad</span> (original: <span class="tituloLibro">The Left Hand of Darkness</span>)
-                </p>
+        </div>
+        <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="images/tapa_002.jpg" alt="..." style="width: 100%;">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title"><span class="tituloLibro">El cuento de la criada</span> &#10001; (título original: <span class="tituloLibro">The Handmaid's Tale</span>)</h5>
+                  <p class="card-text"><span class="datosBibliograficos">Autora:</span> Margaret Atwood</p>
+                  <p class="card-text"><span class="datosBibliograficos">Año:</span> 1985</p>
+                  <p class="card-text"><span class="datosBibliograficos">Sinopsis:</span> Tras realizar un golpe militar asesinando al presidente y atribuyendo dichos ataques al terrorismo islámico, unos políticos teócratas llegan al poder de Estados Unidos, que pasa a denominarse República de Gilead (proveniente de Galaad, para referirse a la organización política de la obra). Con la excusa de la defensa contra la violencia, aumentan el autoritarismo, disminuyendo las libertades y derechos sociales. Suprimen la libertad de prensa y los derechos de las mujeres, quienes se dividen en castas.</p>
+                  <p class="card-text"><span class="datosBibliograficos">Opinión:</span> A esta altura ya es un clásico de ciencia ficción especulativa, y si quieren tener miedo en serio, les recomiendo que lo lean, porque si bien tiene más de 30 años, parece que lo escribió ayer. Y si saben inglés anímense a leer el original porque la pluma de Margaret es de las más bellas que leí en mi vida.</p>
+                  <p class="card-text"><small class="text-muted">14/06/2021</small></p>
+                </div>
+              </div>
             </div>
-            <div class="year">
-                <p>
-                    <span class="datosBibliograficos">Año:</span> 1969
-                </p>
-            </div>
-            <div class="summary">
-                <p>
-                    <span class="datosBibliograficos">Sinopsis:</span> Esta controvertida novela trata del género y la sexualidad a través de los ojos de un terrestre llegado al planeta Invierno, colonia en la que los habitantes han mutado a hermafroditas capaces de cambiar de sexo.
-                </p>
-            </div>
-            <div class="opinion">
-                <p>
-                    <span class="datosBibliograficos">Opinión:</span> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa consequatur libero reprehenderit quasi quidem quod asperiores corporis! Cumque hic, vitae, et architecto optio porro nam, maxime recusandae laudantium harum reprehenderit?
-                </p>
-            </div>
-        </article>
+        </div>
     </main>
     <!-- PIE DE PÁGINA -->
     <footer>
@@ -71,5 +96,7 @@
             <a href="#" title="Facebook"><span class="material-icons">facebook</span></a>
             <a href="#" title="Envíanos un e-mail"><span class="material-icons">email</span></div></a>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
