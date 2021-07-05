@@ -1,138 +1,11 @@
+/* Reset */
+
 * {
     margin:0;
     padding:0;
 }
 
-/* Estilos generales */
-body {
-    color:#353233;
-    font-family:'Didact Gothic', sans-serif;
-    background-color:#DCCCFF;
-}
-
-h1 {
-    color:#289b7e;
-}
-
-h2 {
-    color:#F17105;
-    margin-bottom:3%;
-}
-
-h3 {
-    color:#46769D;
-}
-
-p {
-    margin: 2% 0;
-    text-align:justify;
-}
-
-a {
-    color:#C75C6A;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-header, main, footer {
-    margin: 0 auto;
-    background-color:#FFF;
-    width: 83%;
-}
-
-main {
-    padding: 4%;
-    overflow:auto;
-}
-
-/* Header */
-
-header {
-    position:sticky;
-    top:0px;
-    z-index:9;
-}
-
-#banner {
-    background-color: #480355;
-    background-image:url("../images/logo.png");
-    background-repeat:no-repeat;
-    background-position: top right;
-    background-size: contain;
-}
-
-#banner h1 {
-    display:inline-block;
-    color:#FFF;
-    width:100%;
-    text-align:center;
-    line-height: 105px;
-}
-
-/* Menú */ 
-
-nav {
-    background-color:#46769D;
-}
-
-nav div.container-fluid {
-    margin:0;
-    padding:0;
-}
-
-nav ul {
-    width: 100%;
-}
-
-nav ul li {
-    text-align:center;
-    width:20%;
-    padding: .5rem 0;
-}
-
-nav ul li:hover {
-    background-color:#F17105;
-}
-
-nav ul li a {
-    color:#FFF !important;
-    font-size:1.2rem;
-}
-
-.navbar {
-    margin:0;
-    padding:0;
-}
-
-/* Footer */
-
-    footer {
-        display:flex;
-        background: linear-gradient(180deg, rgba(72,3,85,1) 60%, rgba(220, 204, 255,1) 100%);
-        height:80px;
-        flex-flow: row nowrap;
-        align-items: center;
-        color:#FFF;
-    }
-    .copy {
-        width:60%;
-        padding-left:3%;
-    }
-    .copy span {
-        font-size:1.3em;
-    }
-
-    .social {
-        width:40%;
-        text-align:right;
-    }
-    .social span {
-        padding-right:20px;
-    }
-    .social a {
-        color:#FFF;
-        font-weight: normal;
-    }
+/*** Estilos por secciones ***/
 
 /* Home */
 
@@ -146,11 +19,19 @@ nav ul li a {
 }
 
 
-/* Elementos de formulario*/
+/* Contacto */
 
 .btn {
     width:15%;
     margin-left: 5px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .btn {
+        width:48%;
+    }
+
 }
 
 .btn-primary {
@@ -175,7 +56,7 @@ legend {
     padding-right:10px;
 }
 
-/* Tablas */
+/* Autores */
 
 table {
     width: 90%;

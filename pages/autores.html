@@ -11,10 +11,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/estilos-sass.css">
 </head>
 <body>
     <!-- ENCABEZADO -->
-    <header>
+    <header class="contenedores">
         <a href="../index.html">
             <div id="banner">
                 <h1 class="animate__animated animate__pulse">Míralos Leer</h1>
@@ -29,10 +30,10 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                    <a class="nav-link" href="../index.html">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="autores.html">Autores</a>
+                    <a class="nav-link active" aria-current="page" href="autores.html">Autores</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="kindle.html">Kindle</a>
@@ -47,7 +48,10 @@
               </div>
             </div>
         </nav>
+        <!-- FIN NAVBAR BOOTSTRAP -->
     </header>
+    <!-- FIN ENCABEZADO -->
+
      <!-- SECCIÓN PRINCIPAL -->
     <main>
         <h2>Autores</h2>
@@ -91,16 +95,20 @@
             </tr>
         </table>
     </main>
+    <!-- FIN SECCIÓN PRINCIPAL -->
+
     <!-- PIE DE PÁGINA -->
-    <footer>
-        <div class="copy">
-            <span>&copy;</span> Copyright 2021
-        </div>
-        <div class="social">
-            <a href="#" title="Instagram"><span class="material-icons">photo_camera</span></a>
-            <a href="#" title="Facebook"><span class="material-icons">facebook</span></a>
-            <a href="#" title="Envíanos un e-mail"><span class="material-icons">email</span></div></a>
+    <footer class="contenedores">
+      <div class="copy">
+        <span>&copy;</span> Copyright 2021
+      </div>
+      <div class="social">
+        <a href="#" title="Instagram"><span class="material-icons">photo_camera</span></a>
+        <a href="#" title="Facebook"><span class="material-icons">facebook</span></a>
+        <a href="#" title="Envíanos un e-mail"><span class="material-icons">email</span></a>
+      </div>
     </footer>
+    <!-- FIN PIE DE PÁGINA -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>

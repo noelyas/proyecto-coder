@@ -1,0 +1,156 @@
+// Includes
+@import "colores"; // Variables de códigos de colores
+@import "medidas"; // Variables de tamaños
+@import "imagenes"; // Variables de imágenes
+
+
+// Mixins
+
+// Mixin para darle color de fondo o texto a un elemento
+@mixin colores($codigo,$tipo){
+    
+    @if $tipo == bg {
+        background-color: $codigo;
+    }
+    @else {
+        color: $codigo;
+    }
+
+}
+
+/* Estilos generales */
+
+body {
+    @include colores($darkGrey, txt);
+    font-family:'Didact Gothic', sans-serif;
+    @include colores($lilac, bg);
+}
+
+h1 {
+    @include colores($green, txt);
+}
+
+h2 {
+    @include colores($orange, txt);
+    margin-bottom:$marginBTitle;
+}
+
+h3 {
+    @include colores($blue, txt);
+}
+
+p {
+    margin: 2% 0;
+    text-align:justify;
+}
+
+a {
+    @include colores($pink, txt);
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.contenedores {
+    margin: 0 auto;
+    @include colores($white, bg);
+    width: $mainWidth;
+}
+
+main {
+    @extend .contenedores;
+    padding: $paddingMain;
+    overflow:auto;
+}
+
+/* Header */
+
+header {
+    position:sticky;
+    top:0px;
+    z-index:9;
+}
+
+#banner {
+    @include colores($purple, bg);
+    background-image:url($logo);
+    background-repeat:no-repeat;
+    background-position: top right;
+    background-size: contain;
+    h1 {
+        display:inline-block;
+        @include colores($white, txt);
+        width:100%;
+        text-align:center;
+        line-height: 105px;
+    }
+}
+
+/* Menú */ 
+
+nav {
+    @include colores($blue, bg);
+    div.container-fluid {
+        margin:0;
+        padding:0;
+    }
+    ul {
+        width: 100%;
+        li {
+            text-align:center;
+            width:20%;
+            padding: .5rem 0;
+            a {
+                font-size:1.2rem;
+            }
+        }
+        li:hover {
+            @include colores($orange, bg);
+        }
+    }
+}
+
+.navbar {
+    margin:0;
+    padding:0;
+}
+
+@media screen and (max-width: 992px) {
+    nav {
+        ul {
+            li {
+                width:100%;
+            }
+        }
+    }
+}
+
+/* Footer */
+
+footer {
+    display:flex;
+    background: linear-gradient(180deg, $purple 60%, $lilac 100%);
+    height:80px;
+    flex-flow: row nowrap;
+    align-items: center;
+    @include colores($white, txt);
+}
+
+.copy {
+    width:60%;
+    padding-left:3%;
+    span {
+        font-size:1.3em;
+    }
+}
+
+.social {
+    width:40%;
+    text-align:right;
+    span {
+        padding-right:20px;
+    }
+    a {
+        @include colores($white, txt);
+        font-weight: normal;
+    }
+}
