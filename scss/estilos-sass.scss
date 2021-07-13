@@ -12,13 +12,69 @@
     @if $tipo == bg {
         background-color: $codigo;
     }
-    @else {
+    @else if $tipo == txt {
         color: $codigo;
+    } 
+    @else {
+        border-color: $codigo;
     }
 
 }
 
+// Mixin para darle formato al texto
+@mixin formato($tipo) {
+
+    @if $tipo == B {
+        font-weight:bold;
+    }
+    @else if $tipo == I {
+        font-style: italic;
+    }
+    @else if $tipo == NB {
+        font-weight:normal;
+    }
+    @else if $tipo == NU {
+        text-decoration:none;
+    }
+    @else {
+        text-decoration:underline;
+    }
+
+}
+
+// Mixin para alinear el texto
+@mixin alinear($tipo) {
+
+    @if $tipo == C {
+        text-align: center;
+    }
+    @else if $tipo == L {
+        text-align: left;
+    }
+    @else if $tipo == R {
+        text-align: right;
+    }
+    @else if $tipo == J {
+        text-align:justify;
+    }
+    @else {
+        text-align:inherit;
+    }
+
+}
+
+/* Reset */
+
+* {
+    margin:0;
+    padding:0;
+}
+
 /* Estilos generales */
+
+html {
+    font-size:$fontResponsive;
+}
 
 body {
     @include colores($darkGrey, txt);
@@ -41,13 +97,13 @@ h3 {
 
 p {
     margin: 2% 0;
-    text-align:justify;
+    @include alinear(J);
 }
 
 a {
     @include colores($pink, txt);
-    text-decoration:none;
-    font-weight:bold;
+    @include formato(NU);
+    @include formato(B);
 }
 
 .contenedores {
@@ -79,9 +135,9 @@ header {
     h1 {
         display:inline-block;
         @include colores($white, txt);
-        width:100%;
-        text-align:center;
-        line-height: 105px;
+        width:$full;
+        @include alinear(C);
+        line-height: $lineH1Banner;
     }
 }
 
@@ -94,9 +150,9 @@ nav {
         padding:0;
     }
     ul {
-        width: 100%;
+        width: $full;
         li {
-            text-align:center;
+            @include alinear(C);
             width:20%;
             padding: .5rem 0;
             a {
@@ -118,7 +174,7 @@ nav {
     nav {
         ul {
             li {
-                width:100%;
+                width:$full;
             }
         }
     }
@@ -128,7 +184,7 @@ nav {
 
 footer {
     display:flex;
-    background: linear-gradient(180deg, $purple 60%, $lilac 100%);
+    background: linear-gradient(180deg, $purple 60%, $lilac $full);
     height:80px;
     flex-flow: row nowrap;
     align-items: center;
@@ -145,12 +201,93 @@ footer {
 
 .social {
     width:40%;
-    text-align:right;
+    @include alinear(R);
     span {
         padding-right:20px;
     }
     a {
         @include colores($white, txt);
-        font-weight: normal;
+        @include formato(NB);
     }
+}
+
+/*** Estilos por secciones ***/
+
+/* Home */
+
+.datosBibliograficos {
+    @include formato(B);
+    @include colores($purple,txt);
+}
+
+.tituloLibro {
+    @include formato(I);
+}
+
+/* Contacto */
+
+.btn {
+    width:15%;
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .btn {
+        width:48%;
+    }
+}
+
+.btn-primary {
+    @include colores($blue,bg);
+    border-color: $darkBlue;
+
+    &:hover, &:active, &:focus {
+        @include colores($darkBlue,bg);
+        @include colores($darkBlue,bd);
+    }
+}
+
+fieldset {
+    padding: 10px 0px;
+    border:none;
+    border-top:1px solid $blue;
+    margin-bottom:10px;
+}
+
+legend {
+    @include colores($blue,txt);
+    font-size:1.4em;
+    padding-right:10px;
+}
+
+/* Autores */
+
+table {
+    width: 90%;
+    th {
+        border-top: 1px solid $blue;
+        border-bottom: 1px solid $blue;
+        @include alinear(C);
+        @include colores($purple,txt);
+    }
+    td {
+        border-top: 1px solid $lightBlue;
+        border-bottom: 1px solid $lightBlue;
+        @include alinear(C);
+    }
+} 
+
+@media screen and (max-width: 460px) {
+    .table {
+        font-size:0.8em;
+    }
+}
+
+
+/* Kindle */
+
+.romanos {
+    list-style-type: lower-roman;
+    margin:3% 0;
+    padding-left:5%;
 }
