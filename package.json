@@ -1,5 +1,5 @@
 {
-  "name": "proyecto_github",
+  "name": "miralos_leer",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/noelyas/proyecto-coder.git"
   },
-  "author": "",
+  "author": "noelyas",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/noelyas/proyecto-coder/issues"
@@ -277,5 +277,11 @@
     "yargs-parser": "^20.2.9",
     "yargs": "^13.3.2"
   },
-  "description": ""
+  "description": "Blog de lectura",
+  "keywords": [
+    "leer",
+    "libros",
+    "reading",
+    "books"
+  ]
 }

@@ -1,12 +1,12 @@
-// Includes
+/* Includes */
 @import "colores"; // Variables de códigos de colores
 @import "medidas"; // Variables de tamaños
 @import "imagenes"; // Variables de imágenes
 
 
-// Mixins
+/* Mixins */
 
-// Mixin para darle color de fondo o texto a un elemento
+// Mixin para dar color de fondo a un elemento, a un texto o a un borde
 @mixin colores($codigo,$tipo){
     
     @if $tipo == bg {
@@ -83,11 +83,11 @@ body {
 }
 
 h1 {
-    @include colores($green, txt);
+    @include colores($purple, txt);
 }
 
 h2 {
-    @include colores($orange, txt);
+    @include colores($green, txt);
     margin-bottom:$marginBTitle;
 }
 
@@ -109,13 +109,15 @@ a {
 .contenedores {
     margin: 0 auto;
     @include colores($white, bg);
-    width: $mainWidth;
+    width: $full;
 }
 
 main {
     @extend .contenedores;
     padding: $paddingMain;
     overflow:auto;
+    width: $mainWidth;
+    min-height:$minHeight;
 }
 
 /* Header */
@@ -124,19 +126,19 @@ header {
     position:sticky;
     top:0px;
     z-index:9;
+    background-image: url($header);
+    background-repeat:no-repeat;
+    background-position: top left;
+    background-size: cover;
 }
 
 #banner {
-    @include colores($purple, bg);
-    background-image:url($logo);
-    background-repeat:no-repeat;
-    background-position: top right;
-    background-size: contain;
+    @include alinear(R);
+    padding-right:5%;
     h1 {
         display:inline-block;
         @include colores($white, txt);
         width:$full;
-        @include alinear(C);
         line-height: $lineH1Banner;
     }
 }
@@ -144,23 +146,24 @@ header {
 /* Menú */ 
 
 nav {
-    @include colores($blue, bg);
     div.container-fluid {
         margin:0;
         padding:0;
     }
     ul {
-        width: $full;
+        width: $mainWidth;
+        margin: 0 auto;
         li {
             @include alinear(C);
             width:20%;
             padding: .5rem 0;
             a {
                 font-size:1.2rem;
+                text-shadow: 1px 1px 4px black;
             }
         }
         li:hover {
-            @include colores($orange, bg);
+            background-color:rgba(255,255,255,0.2);
         }
     }
 }
@@ -170,9 +173,19 @@ nav {
     padding:0;
 }
 
+.navbar {
+    .container-fluid {
+        flex-direction: row-reverse;
+    }
+}
+
 @media screen and (max-width: 992px) {
+    main {
+        width:$full;
+    }
     nav {
         ul {
+            width: $full;
             li {
                 width:$full;
             }
@@ -189,11 +202,11 @@ footer {
     flex-flow: row nowrap;
     align-items: center;
     @include colores($white, txt);
+    padding: 0 3%;
 }
 
 .copy {
     width:60%;
-    padding-left:3%;
     span {
         font-size:1.3em;
     }
@@ -203,7 +216,7 @@ footer {
     width:40%;
     @include alinear(R);
     span {
-        padding-right:20px;
+        padding-left:5%;
     }
     a {
         @include colores($white, txt);
@@ -290,4 +303,12 @@ table {
     list-style-type: lower-roman;
     margin:3% 0;
     padding-left:5%;
+}
+
+/* 404 */
+
+#img404 {
+    display: block;
+    width: 50%;
+    margin: 5% auto;
 }
